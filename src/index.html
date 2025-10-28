@@ -1,13 +1,168 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indevo Digital Agency</title>
+
+    <!-- STYLING -->
+    <link href="./output.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+
+<body class=" bg-midnight">
+    <!-- Loader -->
+    <div id="loader"
+        class="fixed inset-0 flex flex-col justify-center items-center bg-white z-50 transition-opacity duration-500">
+        <div class="loader-inner text-center">
+            <!-- Spinner -->
+            <div class="w-12 h-12 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin mb-4"></div>
+            <!-- Loading Text -->
+            <div class="text-gray-700 text-lg tracking-wide">Loading...</div>
+        </div>
+    </div>
+
+
+
+    <!-- Main Content -->
+    <div id="content" class="hidden text-center mt-20 relative">
+        <!-- Navigation -->
+        <header
+            class="bg-midnight flex justify-between items-center p-4 shadow shadow-amber-50 fixed top-0 left-0 right-0 z-40">
+
+
+            <a href="#" class="bg-lime w-[150px] h-[60px]"><img src="" alt="#"></a>
+
+
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#"
+                            class="text-white font-inter uppercase hover:text-lime font-medium text-[15px]">Home</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white font-inter uppercase hover:text-lime font-medium text-[15px]">About</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white font-inter uppercase hover:text-lime font-medium text-[15px]">Services</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white font-inter uppercase hover:text-lime font-medium text-[15px]">Portifolio</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white font-inter uppercase hover:text-lime font-medium text-[15px]">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+
+            <div id="quote-btn" class="hidden md:block">
+                <a href="#" id="btn-text" class="flex flex-row justify-center items-center space-x-">
+                    <span id="btn-icon1"
+                        class=" items-center justify-center w-10 h-10 bg-lime hover:bg-lime rounded-full hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 14"
+                            fill="currentColor" class="text-black">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.5 3.48332C1.33992 4.01702 2.77535 4.47497 4.44459 4.21895C5.10724 4.11733 5.79528 3.90507 6.48839 3.55078L0.824819 13.3724L2.01532 14L7.84278 3.89861C7.81701 4.8049 7.97533 5.60791 8.25518 6.30612C8.8561 7.80557 9.99183 8.75595 10.899 9.17916L11.5 8.01969C10.876 7.7286 9.99665 7.01577 9.52822 5.84694C9.06791 4.69843 8.97792 3.04121 10.042 0.804358L9.48803 0.567179L9.1229 0.374676L8.57351 0C7.06359 1.9927 5.50583 2.74733 4.22725 2.94342C2.92606 3.14299 1.83564 2.77691 1.25795 2.4098L0.5 3.48332Z" />
+                        </svg>
+                    </span>
+
+                    <span class="bg-lime uppercase font-inter font-medium text-[16px] px-6 py-3 rounded-full">Get a Quote </span>
+
+                    <span id="btn-icon2"
+                        class="inline-flex items-center justify-center w-10 h-10 bg-lime hover:bg-lime rounded-full animate__fadeOutLeft">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 14"
+                            fill="currentColor" class="text-black">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.5 3.48332C1.33992 4.01702 2.77535 4.47497 4.44459 4.21895C5.10724 4.11733 5.79528 3.90507 6.48839 3.55078L0.824819 13.3724L2.01532 14L7.84278 3.89861C7.81701 4.8049 7.97533 5.60791 8.25518 6.30612C8.8561 7.80557 9.99183 8.75595 10.899 9.17916L11.5 8.01969C10.876 7.7286 9.99665 7.01577 9.52822 5.84694C9.06791 4.69843 8.97792 3.04121 10.042 0.804358L9.48803 0.567179L9.1229 0.374676L8.57351 0C7.06359 1.9927 5.50583 2.74733 4.22725 2.94342C2.92606 3.14299 1.83564 2.77691 1.25795 2.4098L0.5 3.48332Z" />
+                        </svg>
+                    </span>
+                </a>
+
+            </div>
+
+
+            <!-- Mobile navigation -->
+            <div class="md:hidden ">
+                <!-- Menu button -->
+                <button id="mobile-menu-button" class="text-lime-600 focus:outline-none z-50 relative">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Mobile menu -->
+                <div id="mobile-menu" class="absolute w-screen h-screen left-0 top-0 bg-lime opacity-0 translate-x-full pointer-events-none transition-all duration-500 ease-in-out z-40 ">
+
+                <!-- Close button -->
+                <button id="close-menu-button" class="absolute top-4 right-4 text-white text-3xl focus:outline-none">&times;</button>
+
+                <!-- Navigation -->
+                 <div class="w-full h-full grid grid-cols-2">
+                    <div class="bg-transparent"></div>
+                    <div class="bg-midnight text-white flex flex-col justify-center uppercase items-start space-y-8 text-lg font-medium ">
+    <a href="#" class="w-full text-left mx-5 py-4 text-[14px] border-b border-gray-700">Home</a>
+    <a href="#" class="w-full text-left mx-5 py-4 text-[14px] border-b border-gray-700">About</a>
+    <a href="#" class="w-full text-left mx-5 py-4 text-[14px] border-b border-gray-700">Services</a>
+    <a href="#" class="w-full text-left mx-5 py-4 text-[14px] border-b border-gray-700">Contact</a>
+    <a href="#" class="w-full text-left mx-5 py-4 text-[14px] border-b border-gray-700">Blog</a>
+</div>
+
+
+                 </div>
+
+                </div>
+
+            </div>
+
+            <script>
+                const menuButton = document.getElementById('mobile-menu-button');
+                const closeButton = document.getElementById('close-menu-button');
+                const mobileMenu = document.getElementById('mobile-menu');
+
+                // Open menu: slide + fade in
+                menuButton.addEventListener('click', () => {
+                    mobileMenu.classList.remove('opacity-0', 'translate-x-full', 'pointer-events-none');
+                    mobileMenu.classList.add('opacity-100', 'translate-x-0');
+
+                    menuButton.classList.add('hidden'); // hide hamburger button
+                });
+
+                // Close menu: slide + fade out
+                closeButton.addEventListener('click', () => {
+                    mobileMenu.classList.add('opacity-0', 'translate-x-full', 'pointer-events-none');
+                    mobileMenu.classList.remove('opacity-100', 'translate-x-0');
+
+                    menuButton.classList.remove('hidden'); // show hamburger button
+                });
+
+
+            </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </header>
+
+    </div>
+
+    <script src="js/spinner.js"></script>
 </body>
+
 </html>
