@@ -32,13 +32,14 @@
 
 
     <!-- Main Content -->
-    <div id="content" class="hidden text-center mt-20 relative">
+    <div id="content" class="hidden text-center relative">
         <!-- Navigation -->
         <header
-            class="bg-midnight flex justify-between items-center p-4 shadow shadow-amber-50 fixed top-0 left-0 right-0 z-40">
+            class="bg-[var(--color-midnight)] flex justify-between items-center p-2 md:p-4 shadow shadow-amber-50 fixed top-0 left-0 right-0 z-40">
 
 
-            <a href="#" class="bg-transparent w-[150px] h-[60px]"><img src="./assets/images/indevo-logo-white.png" alt="#"></a>
+            <a href="#" class="bg-transparent w-[150px] h-[60px]"><img src="./assets/images/indevo-logo-white.png"
+                    alt="#"></a>
 
 
             <nav class="hidden md:block">
@@ -115,7 +116,7 @@
                         <div class="bg-transparent"></div>
                         <div
                             class="bg-[#010101] text-white flex flex-col justify-center uppercase items-start space-y-2 text-lg font-medium pr-[50px]">
-                            <a href="#" 
+                            <a href="#"
                                 class="w-full text-left hover:text-[var(--color-lime)] ml-5 py-4 text-[14px] border-b border-gray-700">Home</a>
 
                             <a href="#"
@@ -127,7 +128,7 @@
                             <a href="#"
                                 class="w-full text-left hover:text-[var(--color-lime)] ml-5 py-4 text-[14px] border-b border-gray-700">Portifolio</a>
 
-                            <a href="#" 
+                            <a href="#"
                                 class="w-full text-left hover:text-[var(--color-lime)] ml-5 py-4 text-[14px] border-b border-gray-700">Contact</a>
                         </div>
 
@@ -173,6 +174,93 @@
             </script>
 
         </header>
+
+
+        <!-- banner 1 -->
+        <div id="carousel"
+            class="w-full h-max bg-transparent flex flex-col md:justify-center md:items-center text-white overflow-x-hidden">
+            <div id="banner1"
+                class="w-screen h-[80dvh] md:h-[100vh] flex flex-col justify-center md:justify-end items-start bg-transparent px-10 pt-10 pb-2">
+                <p class=" text-5xl md:text-9xl uppercase font-bold text-white mb-4">
+                    Where Ideas
+                </p>
+
+                <div class="w-full flex flex-col md:flex-row items-start md:items-center md:space-x-6">
+                    <div class="w-[100%] md:w-[300px] h-[120px] bg-red-500 rounded-[30px] md:rounded-[100px]"></div>
+                    <p class="text-5xl md:text-9xl uppercase font-bold text-white mt-4 md:mb-8"
+                        style="color: black; -webkit-text-stroke: 1px white;">Come To Life</p>
+                </div>
+            </div>
+
+            <!-- Banner 2 -->
+            <div class="grid grid-rows-2 md:grid-cols-2 pt-8 pb-5 px-8 bg-transparent text-white text-left md:mt-4">
+                <div class="flex flex-col space-y-4 md:pr-10">
+                    <p class="font-medium text-3xl text-[var(--font-inter)]">Next-Gen Design & Development Hub</p>
+                    <p class="py-5 font-sm text-md md:text-xl text-gray-300 text-[var(--font-inter)]"> Discover a streamlined
+                        approach to crypto investments with Prisma. Access intuitive tools and
+                        insights to make informed decisions and grow your portfolio confidently we create memorable and
+                        emotional websites, digital experiences, and native apps.</p>
+                    <div id="quote-btn" class="w-max">
+                        <a href="#" id="btn-text" class="flex flex-row justify-center items-center space-x-">
+
+                            <span id="btn-icon1"
+                                class=" items-center justify-center w-10 h-10 bg-white hover:bg-white rounded-full hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 14"
+                                    fill="currentColor" class="text-black">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0.5 3.48332C1.33992 4.01702 2.77535 4.47497 4.44459 4.21895C5.10724 4.11733 5.79528 3.90507 6.48839 3.55078L0.824819 13.3724L2.01532 14L7.84278 3.89861C7.81701 4.8049 7.97533 5.60791 8.25518 6.30612C8.8561 7.80557 9.99183 8.75595 10.899 9.17916L11.5 8.01969C10.876 7.7286 9.99665 7.01577 9.52822 5.84694C9.06791 4.69843 8.97792 3.04121 10.042 0.804358L9.48803 0.567179L9.1229 0.374676L8.57351 0C7.06359 1.9927 5.50583 2.74733 4.22725 2.94342C2.92606 3.14299 1.83564 2.77691 1.25795 2.4098L0.5 3.48332Z" />
+                                </svg>
+                            </span>
+
+                            <span
+                                class="bg-white text-black uppercase font-inter font-medium text-[16px] px-6 py-3 rounded-full">Get
+                                a Quote </span>
+
+                            <span id="btn-icon2"
+                                class="inline-flex items-center justify-center w-10 h-10 bg-white hover:bg-white rounded-full animate__fadeOutLeft">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 14"
+                                    fill="currentColor" class="text-black">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M0.5 3.48332C1.33992 4.01702 2.77535 4.47497 4.44459 4.21895C5.10724 4.11733 5.79528 3.90507 6.48839 3.55078L0.824819 13.3724L2.01532 14L7.84278 3.89861C7.81701 4.8049 7.97533 5.60791 8.25518 6.30612C8.8561 7.80557 9.99183 8.75595 10.899 9.17916L11.5 8.01969C10.876 7.7286 9.99665 7.01577 9.52822 5.84694C9.06791 4.69843 8.97792 3.04121 10.042 0.804358L9.48803 0.567179L9.1229 0.374676L8.57351 0C7.06359 1.9927 5.50583 2.74733 4.22725 2.94342C2.92606 3.14299 1.83564 2.77691 1.25795 2.4098L0.5 3.48332Z" />
+                                </svg>
+                            </span>
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="flex md:justify-end items-center">
+                    <div class="rotating-container">
+                        <svg viewBox="0 0 200 200" class="rotating-text-svg">
+                            <defs>
+                                <!-- Define the circular path -->
+                                <path id="circlePath" d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0" />
+                            </defs>
+
+                            <!-- Text that follows the circular path -->
+                            <text fill="#00ff88" font-weight="bold" class="text-[21px]">
+                                <textPath href="#circlePath" startOffset="0%">
+                                    AGENCY • ANALYSIS • MARKETING • GROWTH •
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
 
     </div>
 

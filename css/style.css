@@ -1,4 +1,7 @@
-
+*{
+  box-sizing: border-box;
+  /* border: 1px solid white; */
+}
 /* Import custom fonts */
 @font-face {
   font-family: 'Poppins';
@@ -74,3 +77,26 @@
   transform: rotate(360deg);   /* spin out */
 }
 
+
+
+.rotating-container {
+    width: 250px;
+    height: 250px;
+    background: #000;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .rotating-text-svg {
+    width: 200px;
+    height: 200px;
+    animation: spin 10s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
