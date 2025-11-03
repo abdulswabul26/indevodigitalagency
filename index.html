@@ -37,7 +37,7 @@
     <div id="content" class="hidden text-center relative">
         <!-- Navigation -->
         <header
-            class="bg-[var(--color-midnight)] flex justify-between items-center px-8 shadow shadow-amber-50 fixed top-0 left-0 right-0 z-40">
+            class="bg-[var(--color-midnight)] flex justify-between items-center px-8 shadow shadow-gray-700 fixed top-0 left-0 right-0 z-40">
 
 
             <a href="#" class="bg-transparent w-[150px] h-[60px]"><img src="./assets/images/indevo-logo-white.png"
@@ -236,7 +236,7 @@
                 <div class="flex md:justify-end items-center">
                     <div class="relative w-[200px] h-[200px] flex items-center justify-center">
                         <!-- Rotating circular text -->
-                        <svg viewBox="0 0 200 200" class="rotating-text-svg absolute w-full h-full animate-spin-slow">
+                        <svg viewBox="0 0 200 200" class="rotating-text-svg absolute w-full h-full animate-spins-slow">
                             <defs>
                                 <!-- Define the circular path -->
                                 <path id="circlePath" d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0" />
@@ -267,10 +267,10 @@
                 <div>
                     <div class="md:grid md:grid-cols-3">
                         <div
-                            class="relative w-[140px] h-[40px] flex items-center justify-center rounded-full overflow-hidden">
+                            class=" relative w-[140px] h-[40px] flex items-center justify-center rounded-full overflow-hidden">
                             <!-- Spinning lime arcs -->
                             <div
-                                class="absolute inset-0 bg-[conic-gradient(from_0deg,_transparent_0deg,_var(--color-lime)_40deg,_transparent_180deg,_var(--color-lime)_220deg,_transparent_360deg)] animate-spin-slow">
+                                class="blur-md absolute inset-0 bg-[conic-gradient(from_0deg,_transparent_0deg,_var(--color-lime)_40deg,_transparent_180deg,_var(--color-lime)_220deg,_transparent_360deg)] animate-spin-slow">
                             </div>
 
                             <!-- Inner circle (center area) -->
@@ -304,8 +304,7 @@
                             </p>
                         </div>
                     </div>
-                    <div
-                        class="border border-gray-200 w-full h-[250px] rounded-tr-[500px]  flex flex-row px-5">
+                    <div class="border border-gray-200 w-full h-[250px] rounded-tr-[500px]  flex flex-row px-5">
                         <div class="flex flex-col justify-center items-start mr-4">
                             <p class="text-[90px] font-bold font-DMSans">
                                 <span id="Mcounter" class="text-[90px] font-bold">100+</span>
@@ -315,8 +314,7 @@
                             </p>
                         </div>
                     </div>
-                    <div
-                        class="border border-gray-200 w-full h-[250px] flex flex-row px-5">
+                    <div class="border border-gray-200 w-full h-[250px] flex flex-row px-5">
                         <div class="flex flex-col justify-center items-start mr-4">
                             <p class="text-[90px] font-bold font-DMSans">
                                 <span id="Kcounter" class="text-[90px] font-bold">120</span>+
@@ -330,7 +328,198 @@
             </div>
         </div>
 
+        <!-- Services -->
+        <div class="md:px-8">
+            <div class=" w-full  bg-transparent px-2 pt-30 pb-20 md:rounded-xl mt-20 mb-10">
+                <div>
+                    <div class="md:grid md:grid-cols-3">
+                        <div
+                            class="relative w-[140px] h-[40px] flex items-center justify-center rounded-full overflow-hidden">
+                            <!-- Spinning lime arcs -->
+                            <div
+                                class="blur-md absolute inset-0 bg-[conic-gradient(from_0deg,_transparent_0deg,_var(--color-lime)_40deg,_transparent_180deg,_var(--color-lime)_220deg,_transparent_360deg)] animate-spin-slow">
+                            </div>
+
+                            <!-- Inner circle (center area) -->
+                            <div
+                                class="relative w-[130px] h-[35px] bg-black rounded-full flex items-center justify-center text-white font-bold">
+                                OUR SERVICES</div>
+                        </div>
+
+
+                        <div id="about-description" class="row-span-1 md:col-span-2">
+                            <p id="animated-text"
+                                class="w-full h-max font-DMSans text-[34px] md:text-[36px] text-left font-medium text-gray-900 px-2 mt-5 md:mt-0 overflow-hidden">
+                                We offer tailored creative solutions to elevate your brand and drive success, <br> exceeding
+                                your expectations services
+                            </p>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <!-- SERVICES TAB -->
+                <div class="w-full text-white mt-20">
+                    <!-- Brand Identity -->
+                    <div class="grid md:grid-cols-3 py-8 border-b border-gray-700">
+                        <div
+                            class="w-full h-[100px] md:col-span-2 flex flex-row items-start px-10 relative leading-tight ">
+                            <div class="h-full flex md:justify-center md:items-center">
+                                <p class="italic text-gray-500 font-bold">01</p>
+                            </div>
+                            <p
+                                class="h-full flex justify-center items-center font-open-sans text-[50px] leading-tight h-max md:h-full text-left md:text-5xl tracking-tighter bg-gradient-to-r from-white via-gray-100 via-gray-400 to-gray-500 bg-clip-text text-transparent md:ml-8 md:ml-0 px-8 cursor-pointer w-[300px] md:w-max">
+                                Brand Identity</p>
+
+                        </div>
+                        <div
+                            class="h-max flex items-start mt-5 space-x-8 mt-8 md:mt-4 text-gray-500 font-semibold w-max pl-24">
+                            <ul class="text-left space-y-2 w-[150px]">
+                                <li>Visual Identity</li>
+                                <li>Logo Design</li>
+                            </ul>
+                            <ul class="text-left space-y-2 w-[150px]">
+                                <li>Brand Guidelines</li>
+                                <li>Packaging Design</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- Website Development-->
+                    <div class="grid md:grid-cols-3 py-8 border-b border-gray-700 h-max">
+                        <div
+                            class="w-full h-[100px] md:col-span-2 flex flex-row items-start px-10 relative leading-tight ">
+                            <div class="h-full flex md:justify-center md:items-center">
+                                <p class="italic text-gray-500 font-bold">02</p>
+                            </div>
+                            <p
+                                class="h-full flex justify-center items-center font-open-sans text-[50px] leading-tight h-max md:h-full text-left md:text-5xl tracking-tighter bg-gradient-to-r from-white via-gray-100 via-gray-400 to-gray-500 bg-clip-text text-transparent md:ml-8 md:ml-0 px-8 cursor-pointer">
+                                Website Development</p>
+
+                        </div>
+                        <div
+                            class="h-max flex items-start mt-5 space-x-8 mt-8 md:mt-4 text-gray-500 font-semibold pl-24">
+                            <ul class="text-left space-y-2 w-[150px]">
+                                <li>Business Websites</li>
+                                <li>E-Commerce</li>
+                            </ul>
+                            <ul class="text-left space-y-2 w-[150px]">
+                                <li>Responsive Design</li>
+                                <li>Optimization</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- Digital transformation-->
+                    <div class="grid md:grid-cols-3 py-8 border-b border-gray-700 h-max overflow-hidden">
+                        <div
+                            class="w-full h-[100px] md:col-span-2 flex flex-row items-start px-10 relative leading-tight ">
+                            <div class="h-full flex md:justify-center md:items-center">
+                                <p class="italic text-gray-500 font-bold">03</p>
+                            </div>
+                            <p
+                                class="h-full flex justify-center items-center font-open-sans text-[50px] leading-tight h-max md:h-full text-left md:text-5xl tracking-tighter bg-gradient-to-r from-white via-gray-100 via-gray-400 to-gray-500 bg-clip-text text-transparent md:ml-8 md:ml-0 px-8 cursor-pointer">
+                                Digital transformation</p>
+
+                        </div>
+                        <div
+                            class="h-max flex items-start mt-5 space-x-8 mt-8 md:mt-4 text-gray-500 font-semibold pl-24">
+                            <ul class="text-left space-y-2 w-[150px]">
+                                <li>Process Automation</li>
+                                <li>Cloud Integration</li>
+                            </ul>
+                            <ul class="text-left space-y-2 w-[150px]">
+                                <li>System Upgrading</li>
+                                <li>Tech Consulting</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Software Solutions -->
+                    <div class="grid md:grid-cols-3 py-8 border-b border-gray-700">
+                        <div
+                            class="w-full h-[100px] md:col-span-2 flex flex-row items-start px-10 relative leading-tight ">
+                            <div class="h-full flex md:justify-center md:items-center">
+                                <p class="italic text-gray-500 font-bold">04</p>
+                            </div>
+                            <p
+                                class="h-full flex justify-center items-center font-open-sans text-[50px] leading-tight h-max md:h-full text-left md:text-5xl tracking-tighter bg-gradient-to-r from-white via-gray-100 via-gray-400 to-gray-500 bg-clip-text text-transparent md:ml-8 md:ml-0 px-8 cursor-pointer">
+                                Software Solutions </p>
+
+                        </div>
+                        <div
+                            class="h-max flex items-start mt-5 space-x-8 mt-8 md:mt-4 text-gray-500 font-semibold pl-24">
+                            <ul class="text-left space-y-2">
+                                <li>Custom Web Solutions</li>
+                                <li>Cross-Platform Apps</li>
+                            </ul>
+                            <ul class="text-left space-y-2">
+                                <li>Cloud-Based Software</li>
+                                <li>Ongoing Support</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
         <script src="js/spinner.js"></script>
+        <script>
+            const textElement = document.getElementById("animated-text");
+            const text = textElement.textContent;
+            textElement.textContent = "";
+
+            // Wrap each character in a span
+            text.split("").forEach(char => {
+                const span = document.createElement("span");
+                span.textContent = char;
+                span.classList.add("transition-colors", "duration-500");
+                span.style.color = "#1F2937"; // initial gray
+                textElement.appendChild(span);
+            });
+
+            const spans = textElement.querySelectorAll("span");
+
+            function updateCharactersOnScroll() {
+                const rect = textElement.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                // Calculate scroll progress
+                // Animation finishes when bottom of text reaches 80% of viewport height
+                const animationEnd = windowHeight * 0.7;
+                let progress = 0;
+
+                if (rect.top < animationEnd && rect.bottom > 0) {
+                    const visibleHeight = animationEnd - Math.max(rect.top, 0);
+                    progress = visibleHeight / rect.height;
+                    progress = Math.min(Math.max(progress, 0), 1); // clamp between 0 and 1
+                }
+
+                const charsToHighlight = Math.floor(progress * spans.length);
+
+                spans.forEach((span, i) => {
+                    if (i < charsToHighlight) {
+                        span.style.color = "#FFFFFF"; // white
+                    } else {
+                        span.style.color = "#1F2937"; // gray
+                    }
+                });
+            }
+
+            window.addEventListener("scroll", updateCharactersOnScroll);
+            window.addEventListener("resize", updateCharactersOnScroll);
+            updateCharactersOnScroll(); // initial call
+        </script>
 
 </body>
 
