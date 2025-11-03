@@ -1,21 +1,14 @@
-*{
+/* Import custom fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/* Global box-sizing reset */
+* {
   box-sizing: border-box;
   /* border: 1px solid white; */
 }
-/* Import custom fonts */
-@font-face {
-  font-family: 'Poppins';
-  src: url('assets/Poppins-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'Inter';
-  src: url('assets/Inter-VariableFont_opsz,wght.ttf') format('truetype');
-  font-weight: 100 900; /* variable font weight range */
-  font-style: normal;
-}
 
 /* Define CSS variables (custom properties) */
 :root {
@@ -23,9 +16,26 @@
   --color-lime: #98E209;
   --color-bermuda: #78dcca;
 
-  --font-poppins: 'Poppins', sans-serif;
-  --font-inter: 'Inter', sans-serif;
-}
+  --font-DMSans: 'DM Sans', sans-serif;
+  --font-montserrat: 'Montserrat', sans-serif;}
+
+/* 
+Tailwind-style utility */
+
+    .font-DMSans {
+      font-family: var(--font-DMSans);
+    }
+    .font-montserrat {
+      font-family: var(--font-montserrat);
+    }
+
+
+
+
+
+
+
+
 
 
 
@@ -65,38 +75,52 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: rotate(0deg);     /* spin in */
-  margin-left: 0;              /* slide in */
+  transform: rotate(0deg);
+  /* spin in */
+  margin-left: 0;
+  /* slide in */
 }
 
 #btn-text:hover #btn-icon2 {
-  margin-left: -40px;          /* slide left */
-  opacity: 0;                  /* fade out */
+  margin-left: -40px;
+  /* slide left */
+  opacity: 0;
+  /* fade out */
   visibility: hidden;
   pointer-events: none;
-  transform: rotate(360deg);   /* spin out */
+  transform: rotate(360deg);
+  /* spin out */
 }
 
 
 
-.rotating-container {
-    width: 250px;
-    height: 250px;
-    background: #000;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+/* Slow spinning animation */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
   }
 
-  .rotating-text-svg {
-    width: 200px;
-    height: 200px;
-    animation: spin 10s linear infinite;
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 10s linear infinite;
+}
+
+
+
+@keyframes spin-slow {
+  0% {
+    transform: rotate(0deg);
   }
 
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg);
   }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 5s linear infinite;
+}

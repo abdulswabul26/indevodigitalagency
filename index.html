@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indevo - Creative Digital Agency</title>
+    <!-- Tailwing Setup -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.4/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- STYLING -->
     <link href="css/style.css" rel="stylesheet">
@@ -35,7 +37,7 @@
     <div id="content" class="hidden text-center relative">
         <!-- Navigation -->
         <header
-            class="bg-[var(--color-midnight)] flex justify-between items-center p-2 md:p-4 shadow shadow-amber-50 fixed top-0 left-0 right-0 z-40">
+            class="bg-[var(--color-midnight)] flex justify-between items-center px-8 shadow shadow-amber-50 fixed top-0 left-0 right-0 z-40">
 
 
             <a href="#" class="bg-transparent w-[150px] h-[60px]"><img src="./assets/images/indevo-logo-white.png"
@@ -176,11 +178,11 @@
         </header>
 
 
-        <!-- banner 1 -->
+        <!-- Carousel -->
         <div id="carousel"
             class="w-full h-max bg-transparent flex flex-col md:justify-center md:items-center text-white overflow-x-hidden">
             <div id="banner1"
-                class="w-screen h-[80dvh] md:h-[100vh] flex flex-col justify-center md:justify-end items-start bg-transparent px-10 pt-10 pb-2">
+                class="w-screen h-[90dvh] md:h-[100vh] flex flex-col justify-center md:justify-end items-start bg-transparent px-10 pt-10 pb-2">
                 <p class=" text-5xl md:text-9xl uppercase font-bold text-white mb-4">
                     Where Ideas
                 </p>
@@ -196,12 +198,13 @@
             <div class="grid grid-rows-2 md:grid-cols-2 pt-8 pb-5 px-8 bg-transparent text-white text-left md:mt-4">
                 <div class="flex flex-col space-y-4 md:pr-10">
                     <p class="font-medium text-3xl text-[var(--font-inter)]">Next-Gen Design & Development Hub</p>
-                    <p class="py-5 font-sm text-md md:text-xl text-gray-300 text-[var(--font-inter)]"> Discover a streamlined
+                    <p class="mb-2 font-sm text-md md:text-[18px] text-gray-300 text-[var(--font-inter)]"> Discover a
+                        streamlined
                         approach to crypto investments with Prisma. Access intuitive tools and
                         insights to make informed decisions and grow your portfolio confidently we create memorable and
                         emotional websites, digital experiences, and native apps.</p>
                     <div id="quote-btn" class="w-max">
-                        <a href="#" id="btn-text" class="flex flex-row justify-center items-center space-x-">
+                        <a href="#" id="btn-text" class="flex flex-row justify-center items-center">
 
                             <span id="btn-icon1"
                                 class=" items-center justify-center w-10 h-10 bg-white hover:bg-white rounded-full hidden">
@@ -231,40 +234,104 @@
                 </div>
 
                 <div class="flex md:justify-end items-center">
-                    <div class="rotating-container">
-                        <svg viewBox="0 0 200 200" class="rotating-text-svg">
+                    <div class="relative w-[200px] h-[200px] flex items-center justify-center">
+                        <!-- Rotating circular text -->
+                        <svg viewBox="0 0 200 200" class="rotating-text-svg absolute w-full h-full animate-spin-slow">
                             <defs>
                                 <!-- Define the circular path -->
                                 <path id="circlePath" d="M100,100 m-75,0 a75,75 0 1,1 150,0 a75,75 0 1,1 -150,0" />
                             </defs>
 
                             <!-- Text that follows the circular path -->
-                            <text fill="#00ff88" font-weight="bold" class="text-[21px]">
+                            <text fill="white" font-weight="bold" class="text-[21px]">
                                 <textPath href="#circlePath" startOffset="0%">
                                     AGENCY • ANALYSIS • MARKETING • GROWTH •
                                 </textPath>
                             </text>
                         </svg>
+
+                        <!-- Center circular div -->
+                        <div
+                            class="w-[90px] h-[90px] bg-[var(--color-lime)] rounded-full flex items-center justify-center">
+                            <span class="text-black font-semibold">LOGO</span>
+                        </div>
                     </div>
-
-
                 </div>
 
             </div>
         </div>
 
+        <!-- About Us -->
+        <div class="md:px-8 h-max">
+            <div class=" w-full md:h-[900px] bg-white px-2 pt-30 pb-20 md:rounded-xl mt-20 mb-10">
+                <div>
+                    <div class="md:grid md:grid-cols-3">
+                        <div
+                            class="relative w-[140px] h-[40px] flex items-center justify-center rounded-full overflow-hidden">
+                            <!-- Spinning lime arcs -->
+                            <div
+                                class="absolute inset-0 bg-[conic-gradient(from_0deg,_transparent_0deg,_var(--color-lime)_40deg,_transparent_180deg,_var(--color-lime)_220deg,_transparent_360deg)] animate-spin-slow">
+                            </div>
+
+                            <!-- Inner circle (center area) -->
+                            <div
+                                class="relative w-[130px] h-[35px] bg-black rounded-full flex items-center justify-center text-white font-bold">
+                                ABOUT US</div>
+                        </div>
 
 
+                        <div id="about-description" class=" row-span-1 md:col-span-2">
+                            <p
+                                class="w-[100%] font-DMSans text-[32px] md:text-[36px] text-left font-medium text-gray-900 px-2 mt-5 md:mt-0">
+                                We are a creative
+                                team dedicated to crafting innovative designs and strategies that help
+                                brands stand out and connect with their audience. At digital marketing success, we
+                                believe
+                                in the power of creativity to captivate audiences and build meaningful connections.</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="w-full grid grid-rows-3 md:grid-cols-3 gap-4 mt-20 px-4 md:px-2">
+                    <div
+                        class="border border-gray-200 w-full h-[250px] rounded-tr-[500px] rounded-br-[500px] flex flex-row px-5">
+                        <div class="flex flex-col justify-center items-start mr-4">
+                            <p class="text-[90px] font-bold font-DMSans">
+                                <span id="+counter" class="text-[90px] font-bold">4.6</span>
+                            </p>
+                            <p class="text-[24px] font-DMSans text-gray-500 -mt-3">
+                                Customer Rating
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="border border-gray-200 w-full h-[250px] rounded-tr-[500px]  flex flex-row px-5">
+                        <div class="flex flex-col justify-center items-start mr-4">
+                            <p class="text-[90px] font-bold font-DMSans">
+                                <span id="Mcounter" class="text-[90px] font-bold">100+</span>
+                            </p>
+                            <p class="text-[24px] font-DMSans text-gray-500 -mt-3">
+                                Happy Clients
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="border border-gray-200 w-full h-[250px] flex flex-row px-5">
+                        <div class="flex flex-col justify-center items-start mr-4">
+                            <p class="text-[90px] font-bold font-DMSans">
+                                <span id="Kcounter" class="text-[90px] font-bold">120</span>+
+                            </p>
+                            <p class="text-[24px] font-DMSans text-gray-500 -mt-3">
+                                Work Accomplished
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <script src="js/spinner.js"></script>
 
-
-
-
-
-    </div>
-
-    <script src="js/spinner.js"></script>
 </body>
 
 </html>
